@@ -44,12 +44,16 @@
       <div id="content">
         <!-- insert the page content here -->
         <h1>ElastiSearch Imp Queries</h1>
-        <p>search query <b>curl -H "Content-Type:application/json" -XGET "127.0.0.1:9200/products/_doc/_search?size=1&pretty" -d'
+        <p><b>Search query </b>curl -H "Content-Type:application/json" -XGET "127.0.0.1:9200/products/_doc/_search?size=1&pretty" -d'
 {
 "query":{
 "match_all":{}
 }
-}'</b></p>
+}'</p>
+
+<p><b> Delete Query </b>curl -X DELETE "localhost:9200/products?pretty"</p>
+<p><b> Import data from file </b>curl -H "Content-Type:application/json" -XPOST 127.0.0.1:9200/products/product/_bulk --data-binary "@products-bulk.json"</p>
+
         
         
       </div>
